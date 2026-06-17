@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinchana M C | Orbit of Intelligence Portfolio</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Sinchana M C - B.Tech Artificial Intelligence and Data Science student at REVA University. A futuristic, anti-gravity universe showcasing AI, Data Science, projects, and skills.">
+    <meta name="keywords" content="Sinchana M C, Portfolio, B.Tech, Artificial Intelligence, Data Science, REVA University, Orbit of Intelligence, Frontend, Web Developer">
+    <meta name="author" content="Sinchana M C">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas (Layer 1: Stars, Layer 3: Particles & Shooting Stars) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Layer 2: Nebula Clouds -->
+    <div class="nebula nebula-purple" id="nebula-1"></div>
+    <div class="nebula nebula-blue" id="nebula-2"></div>
+    
+    <!-- Layer 4: Floating 3D/Glass Objects in zero-gravity -->
+    <div class="floating-objects-container" id="floating-objects">
+        <!-- Cube -->
+        <div class="float-shape cube" style="top: 15%; left: 10%; --speed: 25s; --delay: -2s; --sz: 60px;">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+        <!-- Ring -->
+        <div class="float-shape ring-shape" style="top: 25%; right: 12%; --speed: 30s; --delay: -5s; --sz: 90px;"></div>
+        <!-- Hexagon -->
+        <div class="float-shape hexagon-shape" style="top: 55%; left: 8%; --speed: 28s; --delay: -8s; --sz: 70px;">
+            <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <polygon points="50,1 93,25 93,75 50,99 7,75 7,25" fill="none" stroke="url(#hex-grad)" stroke-width="2"/>
+                <defs>
+                    <linearGradient id="hex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00D9FF" />
+                        <stop offset="100%" stop-color="#A855F7" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <!-- Sphere -->
+        <div class="float-shape sphere-shape" style="top: 75%; right: 15%; --speed: 22s; --delay: -12s; --sz: 80px;"></div>
+    </div>
+
+    <!-- Mouse Radial Glow Overlay -->
+    <div id="mouse-glow"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-accent">&lt;</span>SMC<span class="logo-accent"> /&gt;</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Main Content Container for Scroll Easing/Z-depth translation -->
+    <main class="scroll-container">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section section">
+            <!-- Layer 5: Large Glowing AI Core (Background of hero) -->
+            <div class="ai-core-container">
+                <div class="ai-core-glowing-sphere"></div>
+                <div class="ai-core-ring orbit-ring-1"></div>
+                <div class="ai-core-ring orbit-ring-2"></div>
+            </div>
+            
+            <div class="hero-content" id="hero-interactive-card">
+                <h3 class="hero-welcome">WELCOME TO THE ORBIT</h3>
+                <h1 class="hero-title">Sinchana M C</h1>
+                <p class="hero-subtitle">B.Tech Artificial Intelligence and Data Science</p>
+                <p class="hero-uni">REVA University</p>
+                <div class="hero-tagline-container">
+                    <span class="tagline-brackets">[</span>
+                    <span class="hero-tagline">Exploring Intelligence Beyond Boundaries</span>
+                    <span class="tagline-brackets">]</span>
+                </div>
+                <div class="hero-ctas">
+                    <a href="#about" class="btn btn-primary">Explore My Journey</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <span>Float Downward</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">01. About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="about-card glass-card float-anim">
+                <div class="card-glow-bg"></div>
+                <div class="about-card-content">
+                    <div class="profile-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">about_me.py</span>
+                    </div>
+                    <div class="about-text-body">
+                        <p class="code-line"><span class="code-keyword">class</span> <span class="code-class">IntelligenceExplorer</span>:</p>
+                        <p class="code-line indent-1"><span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):</p>
+                        <p class="code-line indent-2">self.name = <span class="code-str">"Sinchana M C"</span></p>
+                        <p class="code-line indent-2">self.role = <span class="code-str">"AI & Data Science Student"</span></p>
+                        <p class="code-line indent-2">self.university = <span class="code-str">"REVA University"</span></p>
+                        <p class="code-line indent-2">self.current_year = <span class="code-str">"1st Year B.Tech"</span></p>
+                        
+                        <p class="about-description">
+                            Hi, I'm <span class="highlight">Sinchana M C</span>. I am a first-year B.Tech Artificial Intelligence and Data Science student at REVA University.
+                        </p>
+                        <p class="about-description">
+                            I am deeply passionate about Artificial Intelligence, Data Science, and emerging technologies. I enjoy exploring innovative ideas, cracking complex analytical problems, and building intelligent solutions that can make a positive, real-world impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">02. Academic Pathway</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card card-tilt">
+                        <span class="timeline-year">2025 - Present</span>
+                        <h3 class="timeline-degree">B.Tech in Artificial Intelligence & Data Science</h3>
+                        <p class="timeline-school">REVA University</p>
+                        <p class="timeline-details">Currently in 1st Year. Immersing in mathematics for computation, programming fundamentals, and data analytics architectures.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card card-tilt">
+                        <span class="timeline-year">2023 - 2025</span>
+                        <h3 class="timeline-degree">Pre-University Education</h3>
+                        <p class="timeline-school">PCMB stream</p>
+                        <p class="timeline-details">Developed strong analytical foundation in physics, chemistry, mathematics, and computer science principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">03. Orbit of Skills</h2>
+                <div class="title-line"></div>
+            </div>
+            <p class="skills-instructions">Hover over the skill nodes orbiting the core to visualize their depth and trigger energy bursts.</p>
+            
+            <!-- Skills Orbit Container -->
+            <div class="skills-orbit-container">
+                <!-- Center Core -->
+                <div class="skills-center-core">
+                    <span class="core-text">AI & DS</span>
+                    <div class="core-waves">
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                    </div>
+                </div>
+                
+                <!-- Orbits and Skill Bubbles will be injected dynamically via JS -->
+                <div class="orbit-path orbit-path-1"></div>
+                <div class="orbit-path orbit-path-2"></div>
+                <div class="orbit-path orbit-path-3"></div>
+                
+                <div class="orbiting-nodes-wrapper" id="orbit-nodes">
+                    <!-- Nodes injected dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">04. Featured Ventures</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card card-tilt">
+                    <div class="project-card-glow"></div>
+                    <div class="project-num">01</div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                    <p class="project-desc">A futuristic portfolio website featuring zero-gravity design language, custom physics stars, orbiting skill visualizer, and cinematic parallax scrolling transitions.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Parallax</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sinchanamc1976-star" target="_blank" aria-label="GitHub Repository">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card card-tilt">
+                    <div class="project-card-glow"></div>
+                    <div class="project-num">02</div>
+                    <h3 class="project-title">AI Chatbot</h3>
+                    <p class="project-desc">An intelligent chatbot built using Python and NLP concepts. Designed to understand context, generate smart responses, and assist users with structured requests.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>NLTK</span>
+                        <span>Regex</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sinchanamc1976-star" target="_blank" aria-label="GitHub Repository">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card card-tilt">
+                    <div class="project-card-glow"></div>
+                    <div class="project-num">03</div>
+                    <h3 class="project-title">Weather App</h3>
+                    <p class="project-desc">A modern weather web app with real-time API integrations, location lookup, and dynamic custom weather graphics reflecting actual atmospheric conditions.</p>
+                    <div class="project-tags">
+                        <span>JavaScript</span>
+                        <span>Fetch API</span>
+                        <span>CSS Glassmorphism</span>
+                        <span>SVG Animation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/sinchanamc1976-star" target="_blank" aria-label="GitHub Repository">
+                            <svg class="icon" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">05. Credentials & Certifications</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="certifications-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card glass-card float-anim" style="--delay: 0s;">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+                    </div>
+                    <h3 class="cert-title">NPTEL Certifications</h3>
+                    <p class="cert-issuer">National Programme on Technology Enhanced Learning</p>
+                    <p class="cert-desc">Academic courses in Python Programming, Data Science Fundamentals, and Core AI modules.</p>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card glass-card float-anim" style="--delay: 1.5s;">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24"><path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Coursera Specializations</h3>
+                    <p class="cert-issuer">Online Professional Certifications</p>
+                    <p class="cert-desc">Focused learning tracks on Machine Learning algorithms, mathematical foundations of Data Science, and Python libraries.</p>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card glass-card float-anim" style="--delay: 0.7s;">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Workshops & Seminars</h3>
+                    <p class="cert-issuer">REVA University & Tech Communities</p>
+                    <p class="cert-desc">Participated in hands-on workshops exploring Deep Learning frameworks, Generative AI models, and Cloud Computing platforms.</p>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card glass-card float-anim" style="--delay: 2.2s;">
+                    <div class="cert-badge">
+                        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 6h-4v2h4v2h-4v2h4v2H9V7h6v2z"/></svg>
+                    </div>
+                    <h3 class="cert-title">Hackathons & Coding</h3>
+                    <p class="cert-issuer">Inter-College Competitions</p>
+                    <p class="cert-desc">Engaged in competitive hackathons creating prototypes and scripts addressing real-world problem statements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section scroll-reveal">
+            <div class="section-header">
+                <h2 class="section-title">06. Connect with the Core</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-card glass-card">
+                    <p class="contact-intro">Initiate communications channel. Let's build intelligent systems together.</p>
+                    
+                    <div class="contact-methods">
+                        <!-- Email -->
+                        <a href="mailto:sinchanamc@1976gmail.com" class="contact-icon-wrapper" aria-label="Email Sinchana M C">
+                            <span class="tooltip">sinchanamc@1976gmail.com</span>
+                            <div class="contact-icon mail-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/sinchana-mc-bb15a1417/" target="_blank" class="contact-icon-wrapper" aria-label="LinkedIn Profile">
+                            <span class="tooltip">LinkedIn Profile</span>
+                            <div class="contact-icon linkedin-icon">
+                                <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                        </a>
+                        
+                        <!-- GitHub -->
+                        <a href="https://github.com/sinchanamc1976-star" target="_blank" class="contact-icon-wrapper" aria-label="GitHub Profile">
+                            <span class="tooltip">sinchanamc1976-star</span>
+                            <div class="contact-icon github-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </div>
+                        </a>
+                        
+                        <!-- Phone -->
+                        <a href="tel:8861793181" class="contact-icon-wrapper" aria-label="Call Sinchana M C">
+                            <span class="tooltip">8861793181</span>
+                            <div class="contact-icon phone-icon">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-meta-info">
+                        <div class="meta-row">
+                            <span class="meta-lbl">LOC_COORDS:</span>
+                            <span class="meta-val">REVA University, Bengaluru, IN</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-lbl">SYS_STATUS:</span>
+                            <span class="meta-val text-green">ACTIVE & ONLINE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-stars-decor">
+                <div class="decor-star" style="left: 10%; bottom: 30%; --sz: 2px; --delay: 0.5s;"></div>
+                <div class="decor-star" style="right: 15%; top: 40%; --sz: 3px; --delay: 1.2s;"></div>
+                <div class="decor-star" style="left: 45%; top: 10%; --sz: 2px; --delay: 2s;"></div>
+                <div class="decor-star" style="right: 30%; bottom: 15%; --sz: 4px; --delay: 0.1s;"></div>
+            </div>
+            <p class="footer-tagline">Designed with curiosity and powered by intelligence.</p>
+            <p class="footer-copy">&copy; 2026 Sinchana M C. Orbit of Intelligence portfolio universe.</p>
+        </footer>
+        
+    </main>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
